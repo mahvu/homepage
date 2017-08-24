@@ -2,19 +2,19 @@ import React from 'react'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import { render } from 'react-dom'
 import App from './modules/App'
-import cv from './modules/cv'
-import projects from './modules/projects'
-import project from './modules/project'
-import home from './modules/home'
+import CV from './modules/cv'
+import Projects from './modules/projects'
+import Project from './modules/project'
+import Home from './modules/home'
 
 render((
     <Router history={browserHistory}>
         <Route path="/" component={App}>
-        <IndexRoute component={home}/>
-            <Route path="/projects" component={projects}>
-                <Route path="/projects/:projectName" component={project}/>
+        <IndexRoute component={Home}/>
+            <Route path="/projects" component={Projects}>
+                <Route path="/projects/:projectName" component={Project}/>
             </Route>
-            <Route path="/cv" component={cv}/>
+            <Route path="/cv" component={CV}/>
         </Route>
     </Router>
   ), document.getElementById('app'))
