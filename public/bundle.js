@@ -25464,8 +25464,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	//import LanguageSwitch from './LanguageSwitch'
-
 	exports.default = _react2.default.createClass({
 	  displayName: 'App',
 	  render: function render() {
