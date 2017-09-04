@@ -2,20 +2,11 @@ import React from 'react'
 import { IndexLink } from 'react-router'
 import NavLink from './NavLink'
 
-/*
-var content = React.createClass({
-  render() {
-    return(
-
-    )
-  }
-})
-*/
-
 export default React.createClass({
   render() {
     return (
       <div>
+        <div className="topBar"> </div>
         <h1>Lauri's Homepage</h1>
         <ul role="nav" className="header">
           <li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
@@ -25,6 +16,8 @@ export default React.createClass({
         <div className="content">
           {this.props.children}
         </div>
+        <div className="footer"> Copyright meitsi</div>
+
       </div>
     )
   }

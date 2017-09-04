@@ -10,10 +10,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // send all requests to index.html to enable browserHistory
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname,'public', 'index.html'))
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 var PORT = process.env.PORT || 8080
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log('Production Express server running at localhost:' + PORT)
 })

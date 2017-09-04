@@ -1,17 +1,20 @@
 import React from 'react'
 
-//crude way of parsing correct project description
-function parseInfo(projectName){
-  if(projectName === "Betti"){
-    //console.log('betti');
-    return "betting application";
-  }
-  else if(projectName === "React"){
-    //console.log('jokumuu');
-    return "react application";
-  }
-  else{
-    return "Aztec ritual man";
+//crude way of parsing project description
+let parseInfo = (projectName) => {
+
+  switch (projectName) {
+    case 'Betti':
+      return "betting application";
+      break;
+
+    case 'React':
+      return "react application";
+      break;
+
+    case 'ARM-Controller':
+      return "Aztec ritual man";
+      break;
   }
 }
 
