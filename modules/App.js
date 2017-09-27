@@ -1,6 +1,25 @@
 import React from 'react'
-//import { IndexLink } from 'react-router'
 import NavLink from './NavLink'
+import Expandable from 'react-expandable'
+import styled from 'styled-components';
+
+const Item = styled.div`
+  display: flex;
+  padding: 12px;
+`;
+
+const ItemHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+`;
+ 
+const ItemTitle = styled.div`
+`;
+ 
+const ItemIcon = styled.div`
+`;
 
 export default React.createClass({
   render() {
@@ -13,6 +32,43 @@ export default React.createClass({
             <li><a href="" target="_blank"> <img src="" alt=""/> </a></li>
           </ul>
         </div>
+
+            <Expandable
+              headers={[
+                ({ isOpened }) => (
+                  <ItemHeader>
+                    <ItemTitle>About me</ItemTitle>
+                    <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
+                  </ItemHeader>
+                ),
+                ({ isOpened }) => (
+                  <ItemHeader>
+                    <ItemTitle>CV</ItemTitle>
+                    <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
+                  </ItemHeader>
+                ),
+                ({ isOpened }) => (
+                  <ItemHeader>
+                    <ItemTitle>Projects</ItemTitle>
+                    <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
+                  </ItemHeader>
+                ),
+              ]}
+              enableMultiOpen
+            >
+              <Item>
+                I am very esa
+              </Item>
+
+              <Item>
+                Mah cv
+              </Item>
+
+              <Item>
+                Mah projects
+              </Item>
+
+            </Expandable>
 
 
           <ul role="nav" className="header">
