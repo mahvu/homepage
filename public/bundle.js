@@ -25473,7 +25473,43 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'topBar' },
-	        ' '
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'extLinks' },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://www.linkedin.com/in/lrasi/', target: '_blank' },
+	              ' ',
+	              _react2.default.createElement('img', { src: '/linkedin.png', alt: 'toMyLinkedinProfile' }),
+	              ' '
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              'a',
+	              { href: '', target: '_blank' },
+	              ' ',
+	              _react2.default.createElement('img', { src: '', alt: '' }),
+	              ' '
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              'a',
+	              { href: '', target: '_blank' },
+	              ' ',
+	              _react2.default.createElement('img', { src: '', alt: '' }),
+	              ' '
+	            )
+	          )
+	        )
 	      ),
 	      _react2.default.createElement(
 	        'h1',
