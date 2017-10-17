@@ -1,7 +1,17 @@
 import React from 'react'
 import NavLink from './NavLink'
-import Expandable from 'react-expandable'
+import Expandable from 'react-expandable' // for now I desided to stick with a pretty good library for this functionality
 import styled from 'styled-components';
+
+
+//these should be moved somewhere else
+//update age automatically
+var birthday = new Date("August 10, 1989");
+function calculateAge(birthday) {
+  var ageDifMs = Date.now() - birthday.getTime();
+  var ageDate = new Date(ageDifMs); // miliseconds from epoch
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
 
 const Item = styled.div`
   display: flex;
@@ -36,19 +46,19 @@ export default React.createClass({
             <Expandable
               headers={[
                 ({ isOpened }) => (
-                  <ItemHeader>
+                  <ItemHeader className="about">
                     <ItemTitle>About me</ItemTitle>
                     <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
                   </ItemHeader>
                 ),
                 ({ isOpened }) => (
-                  <ItemHeader>
+                  <ItemHeader className="cv">
                     <ItemTitle>CV</ItemTitle>
                     <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
                   </ItemHeader>
                 ),
                 ({ isOpened }) => (
-                  <ItemHeader>
+                  <ItemHeader className="projects">
                     <ItemTitle>Projects</ItemTitle>
                     <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
                   </ItemHeader>
@@ -56,31 +66,54 @@ export default React.createClass({
               ]}
               enableMultiOpen
             >
-              <Item>
-                I am very esa
+              <Item className="about">
+                <div className="content">I'm Lauri, a {calculateAge(birthday)} years old tech student majoring in software development. I'm also a gaming and e-sports enthusiast.
+                  While on this page you can view and download my CV and get to know some of the projects I've been involved in, some of which are quite imcomplete. <br/> <br/> It is my intention to
+                  gradually improve and update this site as I can spare the time to do so.
+                </div>
               </Item>
 
-              <Item>
-                Mah cv
+              <Item className="cv">
+                <div className="content">
+                  You can download my CV <a href="/cv.pdf" download> here</a> (pdf) or view it in your browser below(eipystylol).
+                </div>
               </Item>
 
-              <Item>
-                Mah projects
+              <Item className="projects">
+                  <div className="content">
+                    <Expandable
+                      headers={[
+                        ({ isOpened }) => (
+                          <ItemHeader>
+                            <ItemTitle>React</ItemTitle>
+                            <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
+                          </ItemHeader>
+                        ),
+                        ({ isOpened }) => (
+                          <ItemHeader>
+                            <ItemTitle>Betti</ItemTitle>
+                            <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
+                          </ItemHeader>
+                        ),
+                        ({ isOpened }) => (
+                          <ItemHeader>
+                            <ItemTitle>ARM-Controller</ItemTitle>
+                            <ItemIcon>{isOpened ? '-' : '+'}</ItemIcon>
+                          </ItemHeader>
+                        ),
+                      ]}
+                      enableMultiOpen
+                    >
+                      <Item> React-applikaatio </Item>
+                      <Item> Bettaus-softa </Item>
+                      <Item> Aztec Ritual Man</Item>
+
+                    </Expandable>
+                  </div>
+
               </Item>
 
             </Expandable>
-
-
-          <ul role="nav" className="header">
-            <li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
-            <li><NavLink to="/cv">CV</NavLink></li>
-            <li><NavLink to="/projects">Projects</NavLink></li>
-          </ul>
-
-
-        <div className="content">
-          {this.props.children}
-        </div>
         
         <div className="footer"> Copyright meitsi</div>
 

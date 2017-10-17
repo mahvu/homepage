@@ -1,16 +1,17 @@
-/* Navigation */
-  .header li a:hover{
-    background-color:#beecea;
-  }
+html, body, div#app #app>div {
+  height: 100%;
+}
 
-  .content li a:hover{
-    background-color:#beecea;
-  }
+div#app {
+  height: 100%;
+}
 
-  .active{
-    color:#fff;
-    background-color:#41c7c2 !important;
-  }
+.content {
+  padding: 20px;
+  min-height: 200px;
+  height: 100%;
+  width: 100%;
+}
 
 /* Menus */
   .topBar {
@@ -38,85 +39,21 @@
           width:auto;
         }
 
-/* Lists */
-ul {
-  list-style: none;
+.about {
+  background-color: green;
 }
 
-  ul.header {
-    background-color:#eee;
-    color:#7B8585;
-    padding: 0;
-  }
+.cv {
+  background-color: pink;
+}
 
-    ul.header li {
-      display: inline-block;
-      padding: 10px 20px;
-      cursor:pointer;
-      transition:0.3s;
-    }
+.projects {
+  background-color: yellow;
+}
 
-
-      ul.header li a {
-        color: #000000;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 20px;
-        display: inline-block;
-      }
-
-
-/* common objects */
-  html, body, #app, #app>div {
-    height: 100%;
-  }
-
-  body {
-      background-color: #808080;
-      margin: 0;
-    }
-
-
-  h1 {
-    padding-left: 20px;
-  }
-
-  h1, h2, p, ul, li {
-    font-family: Helvetica, Arial, sans-serif;
-  }
-
-
-  .content {
-    background-color:#eee;
-    padding: 20px;
-    min-height: 200px;
-    height: 100%;
-  }
-  
-    .content h2 {
-      padding: 0;
-      margin: 0;
-    }
-  
-    .content li {
-      margin-bottom: 10px;
-      list-style-type: none;
-    }
-  
-      .content li a{
-        color: #000000;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 10px;
-        display: inline-block;
-      }
-
-  .footer {
-    position: absolute;
-    right: 0;
-    left: 0;
-    padding: 1rem;
-    background-color:#FFFFFF;
-    color: #232121;
-  }
-
+.OjNpc {
+  height: 100%;
+}
+.iTMMQv {
+  height: 30%;
+}
