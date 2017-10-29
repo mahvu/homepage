@@ -4,17 +4,22 @@ import React from 'react'
 let parseInfo = (projectName) => {
 
   switch (projectName) {
+    /*
     case 'Betti':
       return "betting application";
       break;
+    */
 
-    case 'React':
-      return "react application";
+    case 'Homepage':
+      return "This page";
       break;
 
     case 'ARM-Controller':
-      return "Aztec ritual man";
+      return "Aztec ritual man, https://globalgamejam.org/2016/games/arm-controller";
       break;
+
+    default:
+      return "Unknown projectname";
   }
 }
 

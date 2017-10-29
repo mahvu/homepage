@@ -2,20 +2,12 @@ import React from 'react'
 
 export default React.createClass({
   render() {
-    return <div className="content">
+    return <div>
 
-      You can download my CV <a href="/cv.pdf" download> here</a> (pdf) or view it in your browser below(eipystylol).
-      <div className="picture">
-        <img src="/apina.webp"/>
-      </div>
-      <div className="esa">
+      You can download my CV <a href="/CV_Rasi.pdf" download> here</a> (pdf). For now my CV is only available in finnish.
 
-      </div>
-      <div className="esa">
-
-      </div>
-      <div className="esa">
-
+      <div className="cvImage">
+        <img src="/cv_img.jpg"/>
       </div>
 
     </div>
