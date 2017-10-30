@@ -42,7 +42,7 @@ export default React.createClass({
               I do my best to keep repositories up to date and the descriptions accurate and civil.
               <br />
               <br />
-
+              
               </p>
 
             </div>
