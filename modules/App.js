@@ -38,8 +38,8 @@ export default React.createClass({
               &nbsp;Reference 
               </h2>
 
-              <p>Best option for browsing the projects I've been involved in is to check out my <a href="https://github.com/mahvu">Github profile</a>&nbsp;
-              I have also prepared short descriptions of my personal projects on <a href="">this page</a>. 
+              <p>Best option for browsing the projects I've been involved in is to check out my <a href="https://github.com/mahvu">Github profile</a>&nbsp;. 
+              I do my best to keep repositories up to date and the descriptions accurate and civil.
               <br />
               <br />
 
@@ -62,11 +62,11 @@ export default React.createClass({
     <div className="footer">
       Lauri Rasi
 
-      <div itemscope itemtype="http://schema.org/Person">
-        <link itemprop="url" href="laurira.si"/>
-        <a itemprop="sameAs" href="https://twitter.com/mafu_ow"> <i className="fa fa-twitter"></i> </a>
-        <a itemprop="sameAs" href="https://github.com/mahvu"> <i className="fa fa-git"></i> </a>
-        <a itemprop="sameAs" href="https://www.linkedin.com/in/lrasi/"> <i className="fa fa-linkedin"></i> </a>
+      <div itemScope itemType="http://schema.org/Person">
+        <link itemProp="url" href="laurira.si"/>
+        <a itemProp="sameAs" href="https://twitter.com/mafu_ow"> <i className="fa fa-twitter"></i> </a>
+        <a itemProp="sameAs" href="https://github.com/mahvu"> <i className="fa fa-git"></i> </a>
+        <a itemProp="sameAs" href="https://www.linkedin.com/in/lrasi/"> <i className="fa fa-linkedin"></i> </a>
       </div>
     </div>
 
