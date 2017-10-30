@@ -1,0 +1,79 @@
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+}
+
+.header {
+  text-align: center;
+  min-height: 150px;
+  background: url(../images/tree-bg.webp) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow:hidden;
+  background-color: #33b59d;
+} 
+.header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    color: white;
+    padding-top: 125px;
+    font-size: 52pt;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  background-color: black;
+}
+
+.footer, .footer a, .footer a:link, .footer a:visited, .footer a:hover, .footer:active{
+  color:white;
+  text-decoration: none;
+}
+.footer i {
+  margin: 0px 20px;
+}
+
+.container {
+  margin-top: 3rem;
+}
+
+.container p {
+  text-align: justify;
+}
+
+.twitter-timeline-rendered { 
+      min-width: 90% !important; 
+    }
+
+@media (min-height: 310px) {.header {min-height: 310px} .header h1 {padding-top:110px;}}
+@media (min-height: 470px) {.header {min-height: 470px} .header h1 {padding-top:240px;}}
+@media (min-height: 790px) {.header {min-height: 790px} .header h1 {padding-top:375px;}}
+@media (min-height: 1000px) {.header {min-height: 1000px} .header h1 {padding-top:500px;}}
+@media (min-height: 1100px) {.header {min-height: 1100px} .header h1 {padding-top:550px;}}
+@media (min-height: 1200px) {.header {min-height: 1200px} .header h1 {padding-top:600px;}}
+@media (min-height: 1300px) {.header {min-height: 1300px} .header h1 {padding-top:650px;}}
+@media (min-height: 1400px) {.header {min-height: 1400px} .header h1 {padding-top:700px;}}
+@media (min-height: 1500px) {.header {min-height: 1500px} .header h1 {padding-top:750px;}}
+@media (min-height: 2000px) {.header {min-height: 2000px} .header h1 {padding-top:1000px;}}
